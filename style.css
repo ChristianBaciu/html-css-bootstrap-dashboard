@@ -2,34 +2,3 @@ body{
     background-color: lightgrey;
 }
 
-.container-vh{
-    height: 100vh;
-    border: 2px solid lime;
-}
-
-.form-control{
-    padding-right: 300px;
-}
-
-ul li{
-    list-style-type: none;
-}
-
-#menu{
-    background-color: red;
-    width: 150px;
-    height: 100%;
-    position: fixed;
-}
-
-.contenitore-boolean{
-    background-color: orange;
-    width: 100%;
-    padding-left: 150px;
-}
-
-.ciaou{
-    background-color: #165bba;
-    border-radius: 20px;
-    font-size: 12px;
-}
