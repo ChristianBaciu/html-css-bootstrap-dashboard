@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Boolean</title>
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!--icone-->
@@ -39,19 +39,19 @@
                     </form>
 
                     <ul class="nav flex-nowrap mb-lg-0">
-                        <li class="nav-item">
+                        <li class="nav-item d-none d-lg-block">
                             <a class="nav-link active" aria-current="page" href="#">
                                 <!--lista-->
                                 <i class="fa-solid fa-list"></i>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item d-none d-lg-block">
                             <a class="nav-link active" aria-current="page" href="#">
                                 <!--domanda-->
                                 <i class="fa-solid fa-circle-question"></i>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item d-none d-lg-block">
                             <a class="nav-link active" aria-current="page" href="#">
                                 <!--puntini-->
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -75,28 +75,35 @@
     
         <!--main-->
         <div class="contanier d-flex" style="height: 100%;">
+            
             <div class="barra-menu">
                 <div id="option">
                     <div class="p-3">
-                        <div class="text-light d-flex align-items-center gap-3 p-2">
+                        <div id="seleziona" class="text-light d-flex align-items-center gap-3 p-2">
                             <i class="fa-solid fa-house"></i>
-                            <a class="text-light text-decoration-none" href="#">Home</a>
+                            <a class="text-light text-decoration-none d-none d-lg-block" href="#">
+                                Home
+                            </a>
                         </div>
-                        <div class="text-light d-flex align-items-center gap-3 p-2">
+                        <div id="seleziona" class="text-light d-flex align-items-center gap-3 p-2">
                             <i class="fa-solid fa-chart-simple"></i>
-                            <a class="text-light text-decoration-none" href="#">Stats</a>
+                            <a class="text-light text-decoration-none d-none d-lg-block" href="#">
+                                Stats
+                            </a>
                         </div>
-                        <div class="text-light d-flex align-items-center gap-3 p-2">
+                        <div id="seleziona" class="text-light d-flex align-items-center gap-3 p-2">
                             <i class="fa-solid fa-signal"></i>
-                            <a class="text-light text-decoration-none" href="#">Signals</a>
+                            <a class="text-light text-decoration-none d-none d-lg-block" href="#">
+                                Signals
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="p-3">
-                    <div class="text-light d-flex align-items-center gap-3 p-2">
+                    <div id="seleziona" class="text-light d-flex align-items-center gap-3 p-2">
                         <i class="fa-solid fa-gear"></i>
-                        <a class="text-light text-decoration-none" href="#">Admin</a>
+                        <a class="text-light text-decoration-none d-none d-lg-block" href="#">Admin</a>
                     </div>
                 </div>
             </div>
@@ -106,7 +113,7 @@
             <div class="boolean" style="width: 100%;">
 
                 <!--boolean app-->
-                <div class="bg-primary pt-4 pb-4 d-flex justify-content-between">
+                <div id="app" class="bg-primary pt-4 pb-4 d-flex justify-content-between">
                     <!--sinistra-->
                     <div class="text-light ps-2">
                         <div class="d-flex align-items-center gap-2">
@@ -120,15 +127,22 @@
                             <div>
                                 <span class="bg-blue rounded-pill p-1">3 app</span>
                             </div>
-                            <div><i class="fa-solid fa-angles-right"></i></div>
                             <div>
-                                <span class="bg-blue rounded-pill p-1">Boolean mobile app</span>
+                                <i class="fa-solid fa-angles-right"></i>
                             </div>
                             <div>
-                                <span class="bg-blue rounded-pill p-1">Boolean web app</span>
+                                <span class="bg-blue rounded-pill p-1 lg-none d-lg-none">
+                                    <i class="fa-solid fa-plus"></i>
+                                </span>
                             </div>
                             <div>
-                                <span class="bg-blue rounded-pill p-1">Boolean blog app</span>
+                                <span class="bg-blue rounded-pill p-1 d-none d-lg-block">Boolean mobile app</span>
+                            </div>
+                            <div>
+                                <span class="bg-blue rounded-pill p-1 d-none d-lg-block">Boolean web app</span>
+                            </div>
+                            <div>
+                                <span class="bg-blue rounded-pill p-1 d-none d-lg-block">Boolean blog app</span>
                             </div>
                         </div>
                     </div>
@@ -142,7 +156,7 @@
                         </div>
                         <div class="d-flex align-items-center gap-3">
                             <div>
-                                <h2>125</h2>
+                                <h2 class="p-1">125</h2>
                             </div>
                         </div>
 
@@ -154,21 +168,64 @@
                             <span class="p-1">Nuovo Studente</span>
 
 
-                            <button type="button" class="btn border-light text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                +
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                                <i class="fa-solid fa-plus"></i>
                             </button>
-
+                            
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title text-black fs-5" id="exampleModalLabel">Inserisci un nuovo studente</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-2">
+                                                    <label for="recipient-name" class="text-black">Nome</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label for="recipient-name" class="text-black">Cognome</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label for="recipient-name" class="text-black">Email</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label for="recipient-name" class="text-black">Password</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label for="recipient-name" class="text-black">Indirizzo</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div>
+                                            <input class="ms-3" type="checkbox" name="b" id="check">
+                                            <span class="text-black">Seleziona per proseguire</span>
+                                        </div>
+                                        <div class="modal-footer d-flex flex-row-reverse">
+                                            <div>
+                                                <button type="button" class="btn btn-warning">Svuota</button>
+                                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Salva</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
                 
-
                 <!--tabelle-->
-                <div class="d-flex">
-
+                <div id="tab" class="d-flex ">
 
                     <!--sinistra-->
-                    <div id="tab-left" style="width: 60%;">
+                    <div id="tab-left">
                         <ul class="list-group p-2 pt-4">
                             <li class="list-group-item bg-body-secondary">
                                 <h4>Prossime classi</h4>
@@ -177,10 +234,9 @@
                                 <span class="fw-bold">Nome</span>
                                 <span class="float-end fw-bold me-4 ms-2">Azioni</span>
                                 <span class="float-end fw-bold me-5 ms-2">Stato</span>
-                                <span class="float-end fw-bold me-5 ms-1">ROI</span>
-                                <span class="float-end fw-bold me-5">Data inizio</span>
+                                <span class="float-end fw-bold me-5 ms-1 d-none d-sm-block">ROI</span>
+                                <span class="float-end fw-bold me-5 d-none d-sm-block">Data inizio</span>
                             </li>
-
                             
                     <!--75--><li class="list-group-item">
                                 <span>
@@ -193,10 +249,9 @@
                                     <span class="p-2"></span>
                                 </span>
                                 <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-success text-light">Done</span>
-                                <span class="float-end me-5">20%</span>
-                                <span class="float-end me-5">15 feb 2021</span>
+                                <span class="float-end me-5 d-none d-sm-block">20%</span>
+                                <span class="float-end me-5 d-none d-sm-block">15 feb 2021</span>
                             </li>
-
                             
                     <!--76--><li class="list-group-item">
                                 <span>
@@ -209,8 +264,8 @@
                                     <span class="p-2"></span>
                                 </span>
                                 <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-success text-light">Done</span>
-                                <span class="float-end me-5">20%</span>
-                                <span class="float-end me-5">15 feb 2021</span>
+                                <span class="float-end me-5 d-none d-sm-block">20%</span>
+                                <span class="float-end me-5 d-none d-sm-block">15 feb 2021</span>
                             </li>
 
                     <!--77--><li class="list-group-item">
@@ -224,8 +279,8 @@
                                     <span class="p-2"></span>
                                 </span>
                                 <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-warning text-light">Process</span>
-                                <span class="float-end me-4 ms-4">20%</span>
-                                <span class="float-end me-4">15 feb 2021</span>
+                                <span class="float-end me-4 ms-4 d-none d-sm-block">20%</span>
+                                <span class="float-end me-4 d-none d-sm-block">15 feb 2021</span>
                             </li>
 
                             
@@ -240,8 +295,8 @@
                                     <span class="p-2"></span>
                                 </span>
                                 <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-success text-light">Done</span>
-                                <span class="float-end me-5">20%</span>
-                                <span class="float-end me-5">15 feb 2021</span>
+                                <span class="float-end me-5 d-none d-sm-block">20%</span>
+                                <span class="float-end me-5 d-none d-sm-block">15 feb 2021</span>
                             </li>
 
                     <!--79--><li class="list-group-item">
@@ -255,8 +310,8 @@
                                     <span class="p-2"></span>
                                 </span>
                                 <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-danger text-light">Failed</span>
-                                <span class="float-end me-5">20%</span>
-                                <span class="float-end me-5">15 feb 2021</span>
+                                <span class="float-end me-5 d-none d-sm-block">20%</span>
+                                <span class="float-end me-5 d-none d-sm-block">15 feb 2021</span>
                             </li>
 
                     <!--80--><li class="list-group-item">
@@ -270,8 +325,8 @@
                                     <span class="p-2"></span>
                                 </span>
                                 <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-success text-light">Done</span>
-                                <span class="float-end me-5">20%</span>
-                                <span class="float-end me-5">15 feb 2021</span>
+                                <span class="float-end me-5 d-none d-sm-block">20%</span>
+                                <span class="float-end me-5 d-none d-sm-block">15 feb 2021</span>
                             </li>
 
                     <!--81--><li class="list-group-item">
@@ -285,8 +340,8 @@
                                     <span class="p-2"></span>
                                 </span>
                                 <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-danger text-light">Failed</span>
-                                <span class="float-end me-5">20%</span>
-                                <span class="float-end me-5">15 feb 2021</span>
+                                <span class="float-end me-5 d-none d-sm-block">20%</span>
+                                <span class="float-end me-5 d-none d-sm-block">15 feb 2021</span>
                             </li>
 
                     <!--82--><li class="list-group-item">
@@ -300,8 +355,8 @@
                                     <span class="p-2"></span>
                                 </span>
                                 <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-success text-light">Done</span>
-                                <span class="float-end me-5">20%</span>
-                                <span class="float-end me-5">15 feb 2021</span>
+                                <span class="float-end me-5 d-none d-sm-block">20%</span>
+                                <span class="float-end me-5 d-none d-sm-block">15 feb 2021</span>
                             </li>
                         </ul>
                         
@@ -355,7 +410,7 @@
 
 
                     <!--destra-->
-                    <div id="tab-right" class="p-4" style="width: 40%;">
+                    <div id="tab-right" class="p-4">
                         <!--todo-->
                         <div class="card">
                             <ul class="list-group">
@@ -380,20 +435,39 @@
                                 </ul>
                             </div>
                         </div>
-                  </div>
+
+                        <!--img-->
+                        <div class="pt-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <img src="img/stats.jpeg" alt="img" style="width: 100%;">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h4>Utenti attivi</h4>
+                                            <span>Lista degli attivi in piattaforma nell'ultimo mese</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            Gennaio: 1200
+                                        </li>
+                                        <li class="list-group-item">
+                                            Febbraio: 800
+                                        </li>
+                                        <li class="list-group-item">
+                                            Marzo: 1500
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#">Visualizza report approfondito</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
     
+                        </div>
+                  </div>
                 </div>
-
-                
-                
-
-
-
-
-
-
             </div>
-
         </div>
     </div>
 

@@ -6,7 +6,6 @@
 .barra-menu{
     background-color: #051e34;
     height: 100%;
-    width: 150px;
     padding-top: 60px;
 }
 
@@ -31,4 +30,43 @@
 
 .boolean i{
     font-size: 10px;
+}
+
+#tab-left{
+    width: 60%;
+}
+
+#tab-right{
+    width: 40%;
+}
+
+#seleziona:hover{
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+@media screen and ( max-width: 768px ){
+
+    #tab{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #tab-left{
+        width: 100%;
+    }
+
+    #tab-right{
+        width: 100%;
+    }
+
+}
+
+@media screen and ( max-width: 480px ){
+
+    #app{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
 }
