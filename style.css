@@ -1,3 +1,34 @@
 .nav-link{
     color: grey;
 }
+
+/*menù*/
+.barra-menu{
+    background-color: #051e34;
+    height: 100%;
+    width: 150px;
+    padding-top: 60px;
+}
+
+#option{
+    height: calc(100% - 80px);
+}
+
+#option i{
+    width: 20px;
+}
+
+/*boolean app*/
+.boolean{
+    padding-top: 55px;
+    overflow: scroll;
+}
+
+.bg-blue{
+    background-color: #165bba;
+    font-size: 10px;
+}
+
+.boolean i{
+    font-size: 10px;
+}

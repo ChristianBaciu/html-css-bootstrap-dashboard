@@ -11,11 +11,13 @@
     <!--css-->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-secondary-subtle">
+<body class="bg-body-tertiary">
 
-    <header>
-        <nav class="navbar navbar-expand-lg bg-white flex-nowrap">
-            <div class="container-fluid">
+    <div id="contanier-vh" style="height: 100vh;">
+        <!--head-->
+        <header class="fixed-top">
+            <nav class="navbar navbar-expand-lg bg-white flex-nowrap">
+                <div class="container-fluid">
 
                     <!--grande-->
                     <a class="navbar-brand d-none d-lg-block" href="#">
@@ -27,58 +29,373 @@
                         <img src="img/mobile-logo.png" height="40" alt="logo">
                     </a>
 
-                <form class="d-flex w-100" role="search">
-                    <div class="input-group">
-                        <span class="input-group-text bg-secondary-subtle" id="basic-addon1">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </span>
-                        <input type="search" class="form-control bg-secondary-subtle" placeholder="Cerca..." aria-label="Search" aria-describedby="basic-search">
+                    <form class="d-flex w-100" role="search">
+                        <div class="input-group">
+                            <span class="input-group-text bg-secondary-subtle" id="basic-addon1">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <input type="search" class="form-control bg-secondary-subtle" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search" aria-describedby="basic-search">
+                        </div>
+                    </form>
+
+                    <ul class="nav flex-nowrap mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <!--lista-->
+                                <i class="fa-solid fa-list"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <!--domanda-->
+                                <i class="fa-solid fa-circle-question"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <!--puntini-->
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <!--campana-->
+                                <i class="fa-solid fa-bell text-warning"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Profilo</a></li>
+                                <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    
+        <!--main-->
+        <div class="contanier d-flex" style="height: 100%;">
+            <div class="barra-menu">
+                <div id="option">
+                    <div class="p-3">
+                        <div class="text-light d-flex align-items-center gap-3 p-2">
+                            <i class="fa-solid fa-house"></i>
+                            <a class="text-light text-decoration-none" href="#">Home</a>
+                        </div>
+                        <div class="text-light d-flex align-items-center gap-3 p-2">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <a class="text-light text-decoration-none" href="#">Stats</a>
+                        </div>
+                        <div class="text-light d-flex align-items-center gap-3 p-2">
+                            <i class="fa-solid fa-signal"></i>
+                            <a class="text-light text-decoration-none" href="#">Signals</a>
+                        </div>
                     </div>
-                </form>
+                </div>
 
-                <ul class="nav flex-nowrap mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">
-                            <!--lista-->
-                            <i class="fa-solid fa-list"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">
-                            <!--domanda-->
-                            <i class="fa-solid fa-circle-question"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">
-                            <!--puntini-->
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <!--campana-->
-                            <i class="fa-solid fa-bell text-warning"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Profilo</a></li>
-                            <li><a class="dropdown-item" href="#">Fatturazione</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
-                       </ul>
-                    </li>
-                </ul>
+                <div class="p-3">
+                    <div class="text-light d-flex align-items-center gap-3 p-2">
+                        <i class="fa-solid fa-gear"></i>
+                        <a class="text-light text-decoration-none" href="#">Admin</a>
+                    </div>
+                </div>
             </div>
-          </nav>
-    </header>
+
+
+            <!--centro-->
+            <div class="boolean" style="width: 100%;">
+
+                <!--boolean app-->
+                <div class="bg-primary pt-4 pb-4 d-flex justify-content-between">
+                    <!--sinistra-->
+                    <div class="text-light ps-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <div>
+                                <h2>Boolean</h2>
+                            </div>
+                            <span class="bg-blue rounded-pill p-1">Piano blaze</span>
+                        </div>
+    
+                        <div class="d-flex gap-2">
+                            <div>
+                                <span class="bg-blue rounded-pill p-1">3 app</span>
+                            </div>
+                            <div><i class="fa-solid fa-angles-right"></i></div>
+                            <div>
+                                <span class="bg-blue rounded-pill p-1">Boolean mobile app</span>
+                            </div>
+                            <div>
+                                <span class="bg-blue rounded-pill p-1">Boolean web app</span>
+                            </div>
+                            <div>
+                                <span class="bg-blue rounded-pill p-1">Boolean blog app</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--centro-->
+                    <div class="text-light">
+                        <div class="d-flex gap-2">
+                            <div>
+                                <span class="p-1">Studenti online negli ultimi 30 minuti</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div>
+                                <h2>125</h2>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--destra-->
+                    <div class="text-light pe-4">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="p-1">Nuovo Studente</span>
+
+
+                            <button type="button" class="btn border-light text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                +
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!--tabelle-->
+                <div class="d-flex">
+
+
+                    <!--sinistra-->
+                    <div id="tab-left" style="width: 60%;">
+                        <ul class="list-group p-2 pt-4">
+                            <li class="list-group-item bg-body-secondary">
+                                <h4>Prossime classi</h4>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Nome</span>
+                                <span class="float-end fw-bold me-4 ms-2">Azioni</span>
+                                <span class="float-end fw-bold me-5 ms-2">Stato</span>
+                                <span class="float-end fw-bold me-5 ms-1">ROI</span>
+                                <span class="float-end fw-bold me-5">Data inizio</span>
+                            </li>
+
+                            
+                    <!--75--><li class="list-group-item">
+                                <span>
+                                    <i class="fa-solid fa-circle-dot"></i>
+                                    Classe 75
+                                </span>
+                                <span class="float-end">
+                                    <i class="fa-solid fa-pen  border border-black p-2 pe-2 rounded-2"></i>
+                                    <i class="fa-solid fa-trash border border-black p-2 pe-2 rounded-2"></i>
+                                    <span class="p-2"></span>
+                                </span>
+                                <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-success text-light">Done</span>
+                                <span class="float-end me-5">20%</span>
+                                <span class="float-end me-5">15 feb 2021</span>
+                            </li>
+
+                            
+                    <!--76--><li class="list-group-item">
+                                <span>
+                                    <i class="fa-solid fa-circle-dot"></i>
+                                    Classe 76
+                                </span>
+                                <span class="float-end">
+                                    <i class="fa-solid fa-pen  border border-black p-2 pe-2 rounded-2"></i>
+                                    <i class="fa-solid fa-trash border border-black p-2 pe-2 rounded-2"></i>
+                                    <span class="p-2"></span>
+                                </span>
+                                <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-success text-light">Done</span>
+                                <span class="float-end me-5">20%</span>
+                                <span class="float-end me-5">15 feb 2021</span>
+                            </li>
+
+                    <!--77--><li class="list-group-item">
+                                <span>
+                                    <i class="fa-solid fa-circle-dot"></i>
+                                    Classe 77
+                                </span>
+                                <span class="float-end">
+                                    <i class="fa-solid fa-pen border border-black p-2 pe-2 rounded-2"></i>
+                                    <i class="fa-solid fa-trash border border-black p-2 pe-2 rounded-2"></i>
+                                    <span class="p-2"></span>
+                                </span>
+                                <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-warning text-light">Process</span>
+                                <span class="float-end me-4 ms-4">20%</span>
+                                <span class="float-end me-4">15 feb 2021</span>
+                            </li>
+
+                            
+                    <!--78--><li class="list-group-item">
+                                <span>
+                                    <i class="fa-solid fa-circle-dot"></i>
+                                    Classe 78
+                                </span>
+                                <span class="float-end">
+                                    <i class="fa-solid fa-pen  border border-black p-2 pe-2 rounded-2"></i>
+                                    <i class="fa-solid fa-trash border border-black p-2 pe-2 rounded-2"></i>
+                                    <span class="p-2"></span>
+                                </span>
+                                <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-success text-light">Done</span>
+                                <span class="float-end me-5">20%</span>
+                                <span class="float-end me-5">15 feb 2021</span>
+                            </li>
+
+                    <!--79--><li class="list-group-item">
+                                <span>
+                                    <i class="fa-solid fa-circle-dot"></i>
+                                    Classe 79
+                                </span>
+                                <span class="float-end">
+                                    <i class="fa-solid fa-pen  border border-black p-2 pe-2 rounded-2"></i>
+                                    <i class="fa-solid fa-trash border border-black p-2 pe-2 rounded-2"></i>
+                                    <span class="p-2"></span>
+                                </span>
+                                <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-danger text-light">Failed</span>
+                                <span class="float-end me-5">20%</span>
+                                <span class="float-end me-5">15 feb 2021</span>
+                            </li>
+
+                    <!--80--><li class="list-group-item">
+                                <span>
+                                    <i class="fa-solid fa-circle-dot"></i>
+                                    Classe 80
+                                </span>
+                                <span class="float-end">
+                                    <i class="fa-solid fa-pen  border border-black p-2 pe-2 rounded-2"></i>
+                                    <i class="fa-solid fa-trash border border-black p-2 pe-2 rounded-2"></i>
+                                    <span class="p-2"></span>
+                                </span>
+                                <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-success text-light">Done</span>
+                                <span class="float-end me-5">20%</span>
+                                <span class="float-end me-5">15 feb 2021</span>
+                            </li>
+
+                    <!--81--><li class="list-group-item">
+                                <span>
+                                    <i class="fa-solid fa-circle-dot"></i>
+                                    Classe 81
+                                </span>
+                                <span class="float-end">
+                                    <i class="fa-solid fa-pen  border border-black p-2 pe-2 rounded-2"></i>
+                                    <i class="fa-solid fa-trash border border-black p-2 pe-2 rounded-2"></i>
+                                    <span class="p-2"></span>
+                                </span>
+                                <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-danger text-light">Failed</span>
+                                <span class="float-end me-5">20%</span>
+                                <span class="float-end me-5">15 feb 2021</span>
+                            </li>
+
+                    <!--82--><li class="list-group-item">
+                                <span>
+                                    <i class="fa-solid fa-circle-dot"></i>
+                                    Classe 82
+                                </span>
+                                <span class="float-end">
+                                    <i class="fa-solid fa-pen  border border-black p-2 pe-2 rounded-2"></i>
+                                    <i class="fa-solid fa-trash border border-black p-2 pe-2 rounded-2"></i>
+                                    <span class="p-2"></span>
+                                </span>
+                                <span class="float-end me-5 rounded-2 ps-1 pe-1 bg-success text-light">Done</span>
+                                <span class="float-end me-5">20%</span>
+                                <span class="float-end me-5">15 feb 2021</span>
+                            </li>
+                        </ul>
+                        
+                        <!--FAQ-->
+                        <div class="accordion accordion-flush p-2 pt-4" id="accordionFlushExample">
+                            <ul class="list-group ">
+                                <li class="list-group-item bg-body-secondary"><h4>F.A.Q.</h4>
+                                </li>
+                            </ul>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        Come aggiungere un nuovo studente?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Scoprilo da solo.
+                                        <i class="fa-regular fa-face-smile"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        Come posso accendere alle informazioni del mio account?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Scoprilo da solo.
+                                        <i class="fa-regular fa-face-smile"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                        Posso usare questa dashboard da mobile?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Scoprilo da solo.
+                                        <i class="fa-regular fa-face-smile"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--destra-->
+                    <div id="tab-right" class="p-4" style="width: 40%;">
+                        <!--todo-->
+                        <div class="card">
+                            <ul class="list-group">
+                                <li class="list-group-item bg-body-secondary">
+                                    <h4>Todo</h4>
+                                </li>
+                            </ul>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <input type="checkbox" name="b" id="check">
+                                        Kickoff nuove classi
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input type="checkbox" name="b" id="check">
+                                        Lezione su Bootstrap 5 in classe #75
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input type="checkbox" name="b" id="check">
+                                        Controllare username gitnub studenti
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                  </div>
+    
+                </div>
+
+                
+                
 
 
 
 
 
 
+            </div>
 
-
-
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
