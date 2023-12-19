@@ -32,6 +32,10 @@
     font-size: 10px;
 }
 
+.offcanvas.offcanvas-end{
+    width: 60%;
+}
+
 #sinistra{
     width: 70%;
 }
@@ -39,7 +43,6 @@
 #destra{
     width: 30%;
 }
-
 
 #seleziona:hover{
     background-color: rgba(255, 255, 255, 0.5)
@@ -58,7 +61,7 @@
 
     #destra{
         width: 100%;
-    }
+    }     
 
 }
 
@@ -72,6 +75,10 @@
 
     .small{
         display: none;
+    }
+
+    .offcanvas.offcanvas-end{
+        width: 100%;
     }
 
 }
